@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.Container{
+  background: lightgray;
+margin: 0 70px 0 70px;
+}
+
+.item{
+  background: lightblue;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.item.purchased{
+  text-decoration: line-through;
+  background: red;
+}
+
+
+
+.Input{
+  border-radius: 2px;
+  /* padding: 5px; */
+  margin: 12px;
+  font-weight: bold;
+}
+.Btn{
+  
+  margin: 6px;
+  font-weight: bold;
+  background: lightblue;
+}
