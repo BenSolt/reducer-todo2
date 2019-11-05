@@ -1,18 +1,24 @@
 //reducer
 export const initialState = [
+    
+    {
+        item: 'Learn about javaScript',
+        completed: false,
+        id: 1
+      },
 
-{
-    item: 'Learn about reducers',
-    completed: false,
-    id: 1
-  },
+    {
+        item: 'Learn about reducers',
+        completed: false,
+        id: 2
+      },
 
 ]
 
 export const todoReducer = (state, action) => {
     switch (action.type) {
 
-// ADD TODO
+// ADD TODO step 3
  case "ADDTODO":
      return [...state,
     {
@@ -21,7 +27,7 @@ export const todoReducer = (state, action) => {
         id: Date.now()
     }];
 
-// Toggle Todo
+// Toggle Todo step 4
 
 case "TOGGLE":
     let Clicktoggle =
@@ -29,19 +35,21 @@ case "TOGGLE":
         if(item.id === action.payload) {
      return {
         ...item,
-        completed: !item.completed
+        completed: !item.completed 
      }
+     
     } else {
         return item;
+        
     }
     });
     return Clicktoggle;
 
-// Clear Todo
+// Clear Todo step 5
 case 'CLEARTODO':
     let Clear =
     state.filter(item => {
-        if (item.complteed === true){
+        if (item.completed === true){
             return !item.completed   
         }else{
             return item;

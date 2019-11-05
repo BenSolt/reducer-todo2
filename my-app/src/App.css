@@ -2,21 +2,34 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.Container{
+  background: lightgray;
+margin: 0 70px 0 70px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item{
+  background: lightblue;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #09d3ac;
+.item.purchased{
+  text-decoration: line-through;
+  background: red;
+}
+
+
+
+.Input{
+  border-radius: 2px;
+  /* padding: 5px; */
+  margin: 12px;
+  font-weight: bold;
+}
+.Btn{
+  /* border-radius: 2px; */
+  margin: 6px;
+  font-weight: bold;
+  background: lightblue;
 }
