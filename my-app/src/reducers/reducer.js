@@ -19,7 +19,7 @@ export const todoReducer = (state, action) => {
     switch (action.type) {
 
 // ADD TODO step 3
- case "ADDTODO":
+ case "ADD_TODO":
      return [...state,
     {
         item: action.payload,
@@ -46,7 +46,7 @@ case "TOGGLE":
     return Clicktoggle;
 
 // Clear Todo step 5
-case 'CLEARTODO':
+case 'CLEAR_TODO':
     let Clear =
     state.filter(item => {
         if (item.completed === true){

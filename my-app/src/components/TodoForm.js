@@ -4,13 +4,15 @@ import { initialState, todoReducer } from "../reducers/Reducer";
 // import Todo from './Todo';
 
 const TodoList = props => {
-    const [state1, dispatch] = useReducer(todoReducer, initialState);
-    const [newTitleText, setNewTitleText,] = useState("");
+     const [state1, dispatch] = useReducer(todoReducer, initialState);
+    const [newTitleText, setNewTitleText] = useState("");
 
     const handleChanges = e => {
         setNewTitleText(e.target.value);
         };
-    console.log(state1)
+    console.log('reducerstate',state1)
+
+  
     return (
         <div className="Container">
   
@@ -19,7 +21,7 @@ const TodoList = props => {
                 <h1>REDUCER TODO</h1>
 
         {/* Input field */}
-
+    
         <input
             className="Input"
             type="text"
@@ -33,7 +35,7 @@ const TodoList = props => {
         <button
         className="Btn"
           onClick={() => {
-            dispatch({ type: "ADDTODO", payload: newTitleText });
+            dispatch({ type: "ADD_TODO", payload: newTitleText });
             
           }}
         >
@@ -44,7 +46,7 @@ const TodoList = props => {
         <button
         className="Btn"
           onClick={() => {
-            dispatch({ type: "CLEARTODO", payload: newTitleText });
+            dispatch({ type: "CLEAR_TODO", payload: newTitleText });
             
           }}
         >
